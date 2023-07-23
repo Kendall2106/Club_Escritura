@@ -21,6 +21,7 @@ function App() {
       </header>
       <body>
         <ProjectsSection /> 
+        <ProjectsSection /> 
       </body>
     </main>
   );
