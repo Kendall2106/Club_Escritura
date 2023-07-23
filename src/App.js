@@ -20,7 +20,7 @@ function App() {
       </div>
       </header>
       <body>
-        <ProjectsSection />
+        <ProjectsSection /> 
       </body>
     </main>
   );
