@@ -14,7 +14,7 @@ function App() {
         </div>
         <div class="col-md-6">
           <div class="text_img">
-            <img src="/img/frontPage.png" alt="Front Page" />
+            <img src="./img/frontPage.png" alt="Front Page" />
           </div>
         </div>
       </div>
