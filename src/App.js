@@ -20,7 +20,6 @@ function App() {
       </div>
       </header>
         <ProjectsSection /> 
-        <ProjectsSection /> 
     </main>
   );
 }
