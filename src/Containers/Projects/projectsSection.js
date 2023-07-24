@@ -10,7 +10,7 @@ const ProjectsSection = () => {
             <div className="row">
                 <div className="col-md-4">
                     <div className="box_text">
-                        <img className='imagen-proyects' src="/img/cuento.jpeg"
+                        <img className='imagen-proyects' src="./img/cuento.jpeg"
                         alt='Primer fotografia'/>
                         <br />
                         <br />
@@ -20,7 +20,7 @@ const ProjectsSection = () => {
 
                 <div className="col-md-4">
                     <div className="box_text">
-                        <img className='imagen-proyects' src="/img/Relato.jpeg"
+                        <img className='imagen-proyects' src="./img/Relato.jpeg"
                         alt='Primer fotografia'/>
                         <br />
                         <br />
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
 
                 <div className="col-md-4">
                     <div className="box_text">
-                        <img className='imagen-proyects' src="/img/Poesia.jpeg"
+                        <img className='imagen-proyects' src="./img/Poesia.jpeg"
                         alt='Primer fotografia'/>
                         <br />
                         <br />
