@@ -5,24 +5,22 @@ function App() {
   return (
     <main>
       <header>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="text-bg">
+      <div className="row">
+        <div className="col-md-6">
+          <div className="text-bg">
               <span>Cementerio de libros</span>
               <h1>Olvidados</h1>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="text_img">
+        <div className="col-md-6">
+          <div className="text_img">
             <img src="/img/frontPage.png" alt="Front Page" />
           </div>
         </div>
       </div>
       </header>
-      <body>
         <ProjectsSection /> 
         <ProjectsSection /> 
-      </body>
     </main>
   );
 }
