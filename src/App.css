@@ -3,13 +3,14 @@
 header {
   background: url(/public/img/banner2.jpg);
   min-height: 300px;
-  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
-  position: relative;
+  position: relative
 }
+
+
 header::before {
   position: absolute;
   content: "";
@@ -31,7 +32,7 @@ header::after {
   left: 38px;
 }
 
-header h1{
+.title{
   color: white;
 }
 
