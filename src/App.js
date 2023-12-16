@@ -10,7 +10,7 @@ import List from './Containers/List/list';
 // Tu componente principal
 function App() {
   return (
-    <Router>
+    <Router hashType="noslash">
     
       <Header />
 
