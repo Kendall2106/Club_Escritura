@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 // Componentes de tus rutas
 import ProjectsSection from './Containers/Projects/projectsSection';
@@ -10,11 +10,9 @@ import List from './Containers/List/list';
 // Tu componente principal
 function App() {
   return (
-    <Router hashType="noslash">
-    
+
+      <Router>
       <Header />
-
-
       <Routes>
         {/* Rutas de tu aplicación */}
         <Route exact path="/" element={<ProjectsSection />} />
@@ -23,6 +21,7 @@ function App() {
         <Route path="/list" element={<List />} />
       </Routes>
     </Router>
+    
   );
 }
 
