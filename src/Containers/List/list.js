@@ -1,5 +1,6 @@
 import React from 'react';
 import './list.css';
+import { Link } from 'react-router-dom';
 
 const List = () => {
   return (
@@ -12,7 +13,9 @@ const List = () => {
             <div className='cardBody'>
                 <div className='row cardHeader'>
                     <div className='izq col-lg-6'>
-                        <a href='./workplace'><h1>Titulo Prueba</h1></a>
+                      <Link to="/workplace">
+                          <h1>Titulo Prueba</h1>
+                        </Link>
                     </div>
                     <div className='der col-lg-6'>
                     <p>Kendall Brown</p>
@@ -30,8 +33,10 @@ const List = () => {
           <div className='card col-lg-12'>
             <div className='cardBody'>
                 <div className='row cardHeader'>
-                    <div className='izq col-lg-6'>
-                        <a href='./workplace'><h1>Titulo Prueba</h1></a>
+                    <div className='izq col-lg-6'>                     
+                        <Link to="/workplace">
+                          <h1>Titulo Prueba</h1>
+                        </Link>
                     </div>
                     <div className='der col-lg-6'>
                         <p>Kendall Brown</p>
