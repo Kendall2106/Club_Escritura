@@ -1,38 +1,29 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+// Componentes de tus rutas
 import ProjectsSection from './Containers/Projects/projectsSection';
+import WriteForm from './Containers/WriteForm/writeForm';
+import Header from './Containers/Header/header';
+import Workplace from './Containers/Workplace/workplace';
+import List from './Containers/List/list';
 
+// Tu componente principal
 function App() {
   return (
-    <main>
-     
-        <header>
-        <div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-6">
-      <div className='title'>
-         <span>Cementerio de libros</span><br />
-         <h1>Olvidados</h1>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div className="text_img">
-        <img src="./img/frontPage.png" alt="Front Page" />
-      </div>
-    </div>
-  </div>
-</div>
+    <Router>
+    
+      <Header />
 
-        </ header>
 
-        <ProjectsSection /> 
-    </main>
+      <Routes>
+        {/* Rutas de tu aplicación */}
+        <Route path="/" element={<ProjectsSection />} />
+        <Route path="/form" element={<WriteForm />} />
+        <Route path="/workplace" element={<Workplace />} />
+        <Route path="/list" element={<List />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
-<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          
-          
-          
-        </header>

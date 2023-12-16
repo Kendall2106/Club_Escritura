@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './projectsSection.css';
 
@@ -34,7 +35,10 @@ const ProjectsSection = () => {
                         alt='Primer fotografia'/>
                         <br />
                         <br />
-                        <button className="fill" id="btnAbrirModal">Poesia</button>
+                    
+                        <Link to="/list">
+                          <button className="fill">Poesia</button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,58 @@
+/** banner section **/
+
+header {
+  background: url(/public/img/banner2.jpg);
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative
+}
+
+
+header::before {
+  position: absolute;
+  content: "";
+  width:50px; 
+  height:40px;
+  background: url(/public/img/cross.png);
+  background-repeat: no-repeat;
+  bottom: -38px;
+  right: 38px;
+}
+header::after {
+  position: absolute;
+  content: "";
+  width:50px; 
+  height:40px;
+  background: url(/public/img/cross.png);
+  background-repeat: no-repeat;
+  bottom: -38px;
+  left: 38px;
+}
+
+.title{
+  color: white;
+  text-align: left;
+  padding-top: 60px;
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.titleH1{
+  font-size: 81px;
+  line-height: 80px;
+  padding-bottom: 50px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+/** end banner section **/
