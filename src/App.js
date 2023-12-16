@@ -17,7 +17,7 @@ function App() {
 
       <Routes>
         {/* Rutas de tu aplicación */}
-        <Route path="/" element={<ProjectsSection />} />
+        <Route exact path="/" element={<ProjectsSection />} />
         <Route path="/form" element={<WriteForm />} />
         <Route path="/workplace" element={<Workplace />} />
         <Route path="/list" element={<List />} />
