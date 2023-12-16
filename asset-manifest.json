@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.71f80801.css",
-    "main.js": "./static/js/main.0fbca892.js",
-    "static/js/787.e73ba30d.chunk.js": "./static/js/787.e73ba30d.chunk.js",
-    "static/media/banner2.jpg": "./static/media/banner2.55e547664d727bab3bb0.jpg",
-    "index.html": "./index.html",
-    "main.71f80801.css.map": "./static/css/main.71f80801.css.map",
-    "main.0fbca892.js.map": "./static/js/main.0fbca892.js.map",
-    "787.e73ba30d.chunk.js.map": "./static/js/787.e73ba30d.chunk.js.map"
+    "main.css": "/club_escritura/static/css/main.6ff5e28e.css",
+    "main.js": "/club_escritura/static/js/main.246bd0b4.js",
+    "static/js/787.e73ba30d.chunk.js": "/club_escritura/static/js/787.e73ba30d.chunk.js",
+    "static/media/banner2.jpg": "/club_escritura/static/media/banner2.55e547664d727bab3bb0.jpg",
+    "index.html": "/club_escritura/index.html",
+    "main.6ff5e28e.css.map": "/club_escritura/static/css/main.6ff5e28e.css.map",
+    "main.246bd0b4.js.map": "/club_escritura/static/js/main.246bd0b4.js.map",
+    "787.e73ba30d.chunk.js.map": "/club_escritura/static/js/787.e73ba30d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71f80801.css",
-    "static/js/main.0fbca892.js"
+    "static/css/main.6ff5e28e.css",
+    "static/js/main.246bd0b4.js"
   ]
 }
