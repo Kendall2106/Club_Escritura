@@ -25,7 +25,16 @@ const Workplace = () => {
                     </div>
                 </div>
                 <div className='cardDesc'>
-                    <p>Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:</p>
+                    <p>Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
+                    </p>
                 </div>
             </div>
           </div>

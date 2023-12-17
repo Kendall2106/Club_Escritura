@@ -21,29 +21,36 @@ function WriteForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={nombre}
-          onChange={handleNombreChange}
-          placeholder="Ingresa tu nombre"
-        />
+      <form onSubmit={handleSubmit}>
+      <div className='container'>
+        <div className='row justify-content-center'>
+          <div className='body col-lg-12'>
+          <div className="form-group">
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                value={nombre}
+                onChange={handleNombreChange}
+                placeholder="Ingresa tu nombre"
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                value={mensaje}
+                onChange={handleMensajeChange}
+                rows="20"
+                placeholder="Escribe tu mensaje aquí"
+              ></textarea>
+            </div>
+            <button className='send' type="submit">Enviar</button>
+
+          </div>
+        </div>
       </div>
-      <div className="form-group">
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          value={mensaje}
-          onChange={handleMensajeChange}
-          rows="20"
-          placeholder="Escribe tu mensaje aquí"
-        ></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
+      </form>
   );
 }
 

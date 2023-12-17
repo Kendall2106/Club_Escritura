@@ -8,6 +8,12 @@ const List = () => {
     <div className='container'>
       <div className='row justify-content-center'>
         <div className='body col-lg-12'>
+          
+        <div className='col-lg-12'>
+          <Link to="/form">
+            <button>Crear</button>
+          </Link>
+        </div>
 
           <div className='card col-lg-12'>
             <div className='cardBody'>
