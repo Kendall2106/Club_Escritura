@@ -1,3 +1,4 @@
+
 import MovieService from '../../Services/poesia.services';
 import './writeForm.css';
 import React, { useState } from 'react';
@@ -33,10 +34,20 @@ function WriteForm() {
   const handleCreateMovie = async (e) => {
     e.preventDefault(); // Esto evita que la página se refresque
 
+    const today = new Date();
+
+    // Obtener día, mes y año
+    const day = today.getDate();
+    const month = today.getMonth() + 1; // Los meses van de 0 a 11, así que sumamos 1
+    const year = today.getFullYear();
+
+    // Formatear la fecha como día/mes/año
+    const formattedDate = `${day}/${month}/${year}`;
+
     const newMovie = {
       name: nombre,
       autor: autor,
-      date: new Date(),
+      date: formattedDate,
       message: mensaje
     };
 
@@ -79,7 +90,10 @@ function WriteForm() {
                 placeholder="Escribe tu mensaje aquí"
               ></textarea>
             </div>
-            <button className='send' type="submit">Enviar</button>
+            
+              <button className='send' type="submit">Enviar</button>
+            
+            
           </div>
         </div>
       </div>

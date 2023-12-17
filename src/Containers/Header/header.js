@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,10 +8,12 @@ const Header = () => {
         <div className="container mt-5">
             <div className="row">
                 <div className="col-sm-6">
-                    <div className='title'>
-                        <span>Cementerio de libros</span><br />
-                        <h1 className='titleH1'>Olvidados</h1>
-                    </div>
+                    <Link to="/">
+                        <div className='title'>
+                            <span>Cementerio de libros</span><br />
+                            <h1 className='titleH1'>Olvidados</h1>
+                        </div>
+                    </Link>
                 </div>
                 <div className="col-sm-6">
                     <div className="text_img">

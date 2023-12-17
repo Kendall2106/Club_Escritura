@@ -9,8 +9,9 @@ const firestore = getFirestore(app);
 
 const MovieService = () => {
   const [movies, setMovies] = useState([]);
+  
   const fetchMovies = async () => {
-    const moviesCollection = collection(firestore, 'movies');
+    const moviesCollection = collection(firestore, 'poesia');
     const querySnapshot = await getDocs(moviesCollection);
     const moviesData = querySnapshot.docs.map((doc) => doc.data());
     setMovies(moviesData);
