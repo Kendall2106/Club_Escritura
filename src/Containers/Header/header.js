@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
                 <div className="col-sm-6">
                     <div className="text_img">
-                        <img src="./img/frontPage.png" alt="Front Page" />
+                        <img src={process.env.PUBLIC_URL + "/img/frontPage.png"} alt="Front Page" />
                     </div>
                 </div>
             </div>  
