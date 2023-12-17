@@ -1,12 +1,28 @@
 
 import MovieService from '../../Services/poesia.services';
+import CuentoService from '../../Services/cuento.services';
+import RelatoService from '../../Services/relato.services';
 import './writeForm.css';
 import React, { useState } from 'react';
+import {useLocation, useNavigate } from 'react-router-dom';
+
+
 
 function WriteForm() {
+
+
   const [nombre, setNombre] = useState('');
   const [autor, setAutor] = useState('');
   const [mensaje, setMensaje] = useState('');
+
+
+  const movieService = MovieService();
+  const cuentoService = CuentoService();
+  const relatoService = RelatoService();
+
+  const navigate = useNavigate(); 
+  const location = useLocation(); // Use useLocation hook to get the location
+  const myVariableFromState = location.state ? location.state.variable : null;
 
   const handleNombreChange = (event) => {
     setNombre(event.target.value);
@@ -27,7 +43,6 @@ function WriteForm() {
     console.log('Mensaje:', mensaje);
   };*/
 
-  const movieService = MovieService(); // Inicializa el servicio
 
 
 
@@ -51,9 +66,19 @@ function WriteForm() {
       message: mensaje
     };
 
+    if(myVariableFromState==="relato"){
+      await relatoService.createMovie(newMovie);
+    }else if(myVariableFromState==="poesia"){
+      await movieService.createMovie(newMovie);
+    }else if(myVariableFromState==="cuento"){
+      await cuentoService.createMovie(newMovie);
+    }
+
+    navigate('/');
    // console.log(newMovie.name);
-    await movieService.createMovie(newMovie);
   };
+
+
 
   return (
     <form onSubmit={handleCreateMovie}>

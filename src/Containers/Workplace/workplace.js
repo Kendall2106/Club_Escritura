@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {useLocation } from 'react-router-dom';
 
 
 const Workplace = () => {
+  const location = useLocation(); // Use useLocation hook to get the location
+  const card = location.state ? location.state.variable : null;
+  
   return (
     <section>
     <div className='container'>
@@ -13,28 +16,17 @@ const Workplace = () => {
             <div className='cardBody'>
                 <div className='row cardHeader'>
                     <div className='izq col-lg-6'>
-                      <Link to="/workplace">
-                          <h1>Titulo Prueba</h1>
-                        </Link>
+                          <h1>{card.name}</h1>
                     </div>
                     <div className='der col-lg-6'>
-                    <p>Kendall Brown</p>
+                    <p>{card.autor}</p>
                     </div>
                     <div className='col-lg-12'>
-                        <h5>12/05/2023</h5>
+                        <h5>{card.date}</h5>
                     </div>
                 </div>
                 <div className='cardDesc'>
-                    <p>Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    Along with the above updates, the following features will soon be retired from Blogger (over the next few months) due to low usage and to allow the Blogger team to focus on developing new features:
-                    </p>
+                    <p>{card.message}</p>
                 </div>
             </div>
           </div>
