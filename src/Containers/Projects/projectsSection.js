@@ -31,7 +31,7 @@ const ProjectsSection = () => {
 
                 <div className="col-md-4">
                     <div className="box_text">
-                        <img className='imagen-proyects' src="./img/Poesia.jpeg"
+                        <img className='imagen-proyects' src="img/Poesia.jpeg"
                         alt='Primer fotografia'/>
                         <br />
                         <br />

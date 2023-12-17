@@ -14,7 +14,7 @@ const Header = () => {
                 </div>
                 <div class="col-sm-6">
                     <div className="text_img">
-                        <img src="./img/frontPage.png" alt="Front Page" />
+                        <img src="/img/frontPage.png" alt="Front Page" />
                     </div>
                 </div>
             </div>  
