@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/club_escritura/static/css/main.cb492148.css",
-    "main.js": "/club_escritura/static/js/main.b5914a2a.js",
+    "main.js": "/club_escritura/static/js/main.9c7dfba1.js",
     "static/js/787.e73ba30d.chunk.js": "/club_escritura/static/js/787.e73ba30d.chunk.js",
     "static/media/banner2.jpg": "/club_escritura/static/media/banner2.55e547664d727bab3bb0.jpg",
     "index.html": "/club_escritura/index.html",
     "main.cb492148.css.map": "/club_escritura/static/css/main.cb492148.css.map",
-    "main.b5914a2a.js.map": "/club_escritura/static/js/main.b5914a2a.js.map",
+    "main.9c7dfba1.js.map": "/club_escritura/static/js/main.9c7dfba1.js.map",
     "787.e73ba30d.chunk.js.map": "/club_escritura/static/js/787.e73ba30d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb492148.css",
-    "static/js/main.b5914a2a.js"
+    "static/js/main.9c7dfba1.js"
   ]
 }
