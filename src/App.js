@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route  } from 'react-router-dom';
 import './App.css';
 // Componentes de tus rutas
 import ProjectsSection from './Containers/Projects/projectsSection';

@@ -1,32 +1,30 @@
 import React, { useEffect } from 'react';
 import './list.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import MovieService from '../../Services/poesia.services';
+import CuentoService from '../../Services/cuento.services';
+import RelatoService from '../../Services/relato.services';
 
-const List = () => {
+const List = (props) => {
   const movieService = MovieService();
+  const cuentoService = CuentoService();
+  const relatoService = RelatoService();
+  const location = useLocation(); // Use useLocation hook to get the location
+  const myVariableFromState = location.state ? location.state.variable : null;
 
-  // Función para convertir la fecha
-  /*const convertirFecha = (timestamp) => {
-    if (!timestamp) {
-      return 'Fecha no válida';
-    }
-  
-    const fecha = new Date(timestamp);
-  
-    const dia = fecha.getDate();
-    const mes = fecha.getMonth() + 1;
-    const anio = fecha.getFullYear();
-  
-    return `${dia}/${mes}/${anio}`;
-  };*/
 
-  
 
   useEffect(() => {
-    // Aquí puedes acceder a las películas desde el servicio
-    console.log(movieService.movies);
-  }, [movieService.movies]);
+  }, [movieService.movies, cuentoService.movies]);
+
+  //const data = myVariableFromState === 'poesia' ? movieService.movies : [];
+
+  const data =
+  myVariableFromState === 'poesia' ? movieService.movies :
+  myVariableFromState === 'cuento' ? cuentoService.movies :
+  myVariableFromState === 'relato' ? relatoService.movies :
+  [];
+
 
   return (
     <section>
@@ -35,11 +33,11 @@ const List = () => {
           <div className='body col-lg-12'>
             <div className='col-lg-12'>
               <Link to="/form">
-                <button>Crear</button>
+                <button>{myVariableFromState}</button>
               </Link>
             </div>
 
-            {movieService.movies.map((card, index) => (
+            {data.map((card, index) => (
               <div key={index} className='card col-lg-12'>
                 <div className='cardBody'>
                   <div className='row cardHeader'>

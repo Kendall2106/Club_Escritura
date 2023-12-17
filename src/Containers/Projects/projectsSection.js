@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import './projectsSection.css';
 
 const ProjectsSection = () => {
+  
+  
   return (
     <section>
       <div className="three_box">
@@ -15,7 +17,10 @@ const ProjectsSection = () => {
                         alt='Primer fotografia'/>
                         <br />
                         <br />
-                        <button className="fill" id="btnAbrirModal">Cuento</button>
+                        
+                        <Link to="/list" state={{ variable: "cuento" }}>
+                          <button className="fill">Cuento</button>
+                        </Link>
                     </div>
                 </div>
 
@@ -25,7 +30,10 @@ const ProjectsSection = () => {
                         alt='Primer fotografia'/>
                         <br />
                         <br />
-                        <button className="fill" id="btnAbrirModal">Relato</button>
+                        
+                        <Link to="/list" state={{ variable: "relato" }}>
+                        <button className="fill">Relato</button>
+                        </Link>
                     </div>
                 </div>
 
@@ -36,7 +44,7 @@ const ProjectsSection = () => {
                         <br />
                         <br />
                     
-                        <Link to="/list">
+                        <Link to="/list" state={{ variable: "poesia" }}>
                           <button className="fill">Poesia</button>
                         </Link>
                     </div>
