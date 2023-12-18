@@ -59,6 +59,10 @@ function WriteForm() {
     // Formatear la fecha como día/mes/año
     const formattedDate = `${day}/${month}/${year}`;
 
+    //const mensajeParaAlmacenar = mensaje.replace(/\n/g, "||");
+
+
+
     const newMovie = {
       name: nombre,
       autor: autor,

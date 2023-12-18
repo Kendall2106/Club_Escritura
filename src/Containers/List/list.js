@@ -50,7 +50,7 @@ const List = (props) => {
       // Compara las fechas y devuelve el resultado de la comparación
       return dateB - dateA; // Para orden descendente (de más reciente a más antiguo)
       // Puedes cambiar a `return dateA - dateB;` para orden ascendente (de más antiguo a más reciente)
-    });
+    }); 
   };
 
   applyFilters();
@@ -91,7 +91,8 @@ const List = (props) => {
                     </div>
                   </div>
                   <div className='cardDesc'>
-                    <p>{truncateText(card.message, 300)}</p>
+                  
+                  <p style={{ whiteSpace: 'pre-line' }}>{truncateText(card.message, 300)}</p>
                     {card.message.length > 300 && (
                       <a href="/">Ver más</a>
                     )}

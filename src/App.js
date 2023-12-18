@@ -6,6 +6,8 @@ import WriteForm from './Containers/WriteForm/writeForm';
 import Header from './Containers/Header/header';
 import Workplace from './Containers/Workplace/workplace';
 import List from './Containers/List/list';
+import Footer from './Containers/Footer/footer';
+
 
 // Tu componente principal
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path="/workplace" element={<Workplace />} />
         <Route path="/list" element={<List />} />
       </Routes>
+      <Footer />
     </Router>
     
   );

@@ -5,7 +5,7 @@ import {useLocation } from 'react-router-dom';
 const Workplace = () => {
   const location = useLocation(); // Use useLocation hook to get the location
   const card = location.state ? location.state.variable : null;
-  
+
   return (
     <section>
     <div className='container'>
@@ -26,7 +26,8 @@ const Workplace = () => {
                     </div>
                 </div>
                 <div className='cardDesc'>
-                    <p>{card.message}</p>
+                <p style={{ whiteSpace: 'pre-line' }}>{card.message}</p>
+
                 </div>
             </div>
           </div>

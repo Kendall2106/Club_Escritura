@@ -53,13 +53,14 @@ header::after {
 
 
 .title{
-  color: white;
+  
   text-align: center;
   margin-top: 3%;
   display: block;
 }
 
 .titleH1{
+  color: white;
   font-size: 60px;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
