@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/club_escritura/static/css/main.21900993.css",
-    "main.js": "/club_escritura/static/js/main.24b43372.js",
+    "main.css": "/club_escritura/static/css/main.22211022.css",
+    "main.js": "/club_escritura/static/js/main.a122bbb4.js",
     "static/js/787.e73ba30d.chunk.js": "/club_escritura/static/js/787.e73ba30d.chunk.js",
-    "static/media/banner2.jpg": "/club_escritura/static/media/banner2.55e547664d727bab3bb0.jpg",
+    "static/media/probar.png": "/club_escritura/static/media/probar.ccd8d6872088bce151eb.png",
     "index.html": "/club_escritura/index.html",
-    "main.21900993.css.map": "/club_escritura/static/css/main.21900993.css.map",
-    "main.24b43372.js.map": "/club_escritura/static/js/main.24b43372.js.map",
+    "main.22211022.css.map": "/club_escritura/static/css/main.22211022.css.map",
+    "main.a122bbb4.js.map": "/club_escritura/static/js/main.a122bbb4.js.map",
     "787.e73ba30d.chunk.js.map": "/club_escritura/static/js/787.e73ba30d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21900993.css",
-    "static/js/main.24b43372.js"
+    "static/css/main.22211022.css",
+    "static/js/main.a122bbb4.js"
   ]
 }
