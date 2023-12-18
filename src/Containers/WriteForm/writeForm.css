@@ -1,19 +1,23 @@
 input{
-
     width: 100%;
-
+    margin-bottom: 2%;
 }
 
 textarea{
     width: 100%;
+    margin-bottom: 2%;
+}
 
+select{
+  width: 100%;
+  margin-bottom: 2%;
 }
 
 
 
 .send {
     --color: #534EA8;
-    --hover: #534EA8;
+    --hover: #1e743d;
         background: none;
         border: 2px solid;
         font: inherit;

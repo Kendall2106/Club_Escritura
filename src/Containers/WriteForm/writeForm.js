@@ -84,8 +84,9 @@ function WriteForm() {
     <form onSubmit={handleCreateMovie}>
       <div className='container'>
         <div className='row justify-content-center'>
-          <div className='body col-lg-12'>
+          <div className='body col-lg-10'>
             <div className="form-group">
+              Titulo: 
               <input
                 type="text"
                 id="nombre"
@@ -97,6 +98,7 @@ function WriteForm() {
             </div>
 
             <div className="form-group">
+              Autor: 
               <select id="autor" value={autor} onChange={handleAutorChange}>
                 <option value="">Seleccionar</option>
                 <option >Kendall Brown</option>

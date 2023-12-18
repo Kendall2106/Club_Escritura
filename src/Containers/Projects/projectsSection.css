@@ -8,7 +8,7 @@ img {
 
 .three_box {
     background-color: var(--color1);
-    margin-top: 5%;
+
     margin-bottom: 5%;
 }
 
@@ -52,7 +52,7 @@ img {
 
 .fill {
   --color: #534EA8;
---hover: #534EA8;
+--hover: #1e743d;
  
       background: none;
       border: 2px solid;

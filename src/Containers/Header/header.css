@@ -1,15 +1,20 @@
 /** banner section **/
 
-header {
-  background: url(/public/img/banner2.jpg);
+/*header {
+  background: url("https://p4.wallpaperbetter.com/wallpaper/761/546/510/blue-gradient-abstract-wallpaper-preview.jpg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   min-height: 300px;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   position: relative
-}
+}*/
 
+
+/*
 
 header::before {
   position: absolute;
@@ -26,29 +31,39 @@ header::after {
   content: "";
   width:50px; 
   height:40px;
-  background: url(/public/img/cross.png);
+  
+  background-image: url('https://p4.wallpaperbetter.com/wallpaper/761/546/510/blue-gradient-abstract-wallpaper-preview.jpg');
+
   background-repeat: no-repeat;
   bottom: -38px;
   left: 38px;
+}*/
+
+ header {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background: url("probar.png");
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .title{
   color: white;
-  text-align: left;
-  padding-top: 60px;
-  font-size: 42px;
-  line-height: 50px;
-  font-weight: normal;
-  padding-bottom: 20px;
+  text-align: center;
+  margin-top: 3%;
   display: block;
 }
 
 .titleH1{
-  font-size: 81px;
-  line-height: 80px;
-  padding-bottom: 50px;
-  font-weight: bold;
+  font-size: 60px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
+
 
 
 
