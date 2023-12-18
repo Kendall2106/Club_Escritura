@@ -4,8 +4,15 @@ import { Link, useLocation } from 'react-router-dom';
 import MovieService from '../../Services/poesia.services';
 import CuentoService from '../../Services/cuento.services';
 import RelatoService from '../../Services/relato.services';
+import ReactPaginate from 'react-paginate';
+
+const itemsPerPage = 5; // Número de elementos por página
 
 const List = (props) => {
+
+
+
+
   const movieService = MovieService();
   const cuentoService = CuentoService();
   const relatoService = RelatoService();
@@ -53,7 +60,22 @@ const List = (props) => {
     }); 
   };
 
+
+ 
+
+
   applyFilters();
+
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const handlePageClick = (data) => {
+    setCurrentPage(data.selected);
+  };
+
+  const paginatedData = resultFilter.slice(
+    currentPage * itemsPerPage,
+    (currentPage + 1) * itemsPerPage
+  );
 
 
   return (
@@ -61,20 +83,24 @@ const List = (props) => {
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='body col-lg-12'>
-            <div className='col-lg-12'>
-            <select id="autor" value={autor} onChange={handleAutorChange}>
-                <option >Seleccionar</option>
-                <option >Kendall Brown</option>
-                <option >Daniel Adams</option>
-                <option >Jordy Brenes</option>
-            </select>
-
-              <Link to="/form" state={{ variable: myVariableFromState }}>
-                <button>Crear</button>
-              </Link>
+            <div className='row col-lg-12'>
+              <div className='col-lg-6'>
+                <select id="autor" value={autor} onChange={handleAutorChange}>
+                    <option >Seleccionar</option>
+                    <option >Kendall Brown</option>
+                    <option >Daniel Adams</option>
+                    <option >Jordy Brenes</option>
+                </select>
+              </div>
+              <div className='btnCrear col-lg-6'>
+                <Link to="/form" state={{ variable: myVariableFromState }}>
+                  <button>Crear</button>
+                </Link>
+              </div>
             </div>
+            
 
-            {resultFilter.map((card, index) => (
+            {paginatedData.map((card, index) => (
               <div key={index} className='card col-lg-12'>
                 <div className='cardBody'>
                   <div className='row cardHeader'>
@@ -92,15 +118,41 @@ const List = (props) => {
                   </div>
                   <div className='cardDesc'>
                   
-                  <p style={{ whiteSpace: 'pre-line' }}>{truncateText(card.message, 300)}</p>
-                    {card.message.length > 300 && (
-                      <a href="/">Ver más</a>
+                  <p style={{ whiteSpace: 'pre-line' }}>
+                    {truncateText(card.message, 250)}
+                    {card.message.length > 250 && (
+                      <span>
+                        <a href="/"> Ver más</a>
+                      </span>
                     )}
+                  </p>
                   </div>
 
                 </div>
               </div>
             ))}
+
+<ReactPaginate
+        previousLabel={'<'}
+        nextLabel={'>'}
+        breakLabel={'...'}
+        pageCount={Math.ceil(resultFilter.length / itemsPerPage)}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={5}
+        onPageChange={handlePageClick}
+        containerClassName={'pagination'}
+        activeClassName='active'
+        pageClassName={'page-item'} // Estilo de cada página
+        breakClassName={'break-me'}
+        previousClassName={'previous'}
+        nextClassName={'next'}
+        pageLinkClassName={'page-link'} // Estilo del enlace de cada página
+        previousLinkClassName={'previous-link'}
+        nextLinkClassName={'next-link'}
+        disabledClassName={'disabled'}
+      />
+
+
           </div>
         </div>
       </div>

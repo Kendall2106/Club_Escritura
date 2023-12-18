@@ -78,7 +78,7 @@ function WriteForm() {
       await cuentoService.createMovie(newMovie);
     }
 
-    navigate('/');
+    navigate('/list', { state: { variable: myVariableFromState } });
    // console.log(newMovie.name);
   };
 
@@ -98,13 +98,14 @@ function WriteForm() {
                 value={nombre}
                 onChange={handleNombreChange}
                 placeholder="Ingresa tu nombre"
+                required
               />
             </div>
 
             <div className="form-group">
               Autor: 
-              <select id="autor" value={autor} onChange={handleAutorChange}>
-                <option value="">Seleccionar</option>
+              <select id="autor" value={autor} onChange={handleAutorChange} required>
+                <option disabled hidden value="">Seleccionar</option>
                 <option >Kendall Brown</option>
                 <option >Daniel Adams</option>
                 <option >Jordy Brenes</option>
@@ -119,6 +120,7 @@ function WriteForm() {
                 onChange={handleMensajeChange}
                 rows="20"
                 placeholder="Escribe tu mensaje aquí"
+                required
               ></textarea>
             </div>
             

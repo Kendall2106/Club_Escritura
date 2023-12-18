@@ -1,6 +1,6 @@
 import React from 'react';
 import {useLocation } from 'react-router-dom';
-
+import './workplace.css';
 
 const Workplace = () => {
   const location = useLocation(); // Use useLocation hook to get the location
@@ -19,7 +19,7 @@ const Workplace = () => {
                           <h1>{card.name}</h1>
                     </div>
                     <div className='der col-lg-6'>
-                    <p>{card.autor}</p>
+                        <p>{card.autor}</p>
                     </div>
                     <div className='col-lg-12'>
                         <h5>{card.date}</h5>
