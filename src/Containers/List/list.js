@@ -40,7 +40,13 @@ const List = (props) => {
   myVariableFromState === 'relato' ? relatoService.movies :
   [];
 
-
+  const timestampDate = (date) => {
+    const timestampObject = { seconds: date.seconds, nanoseconds: date.nanoseconds };
+    const timestampMilliseconds = timestampObject.seconds * 1000 + Math.floor(timestampObject.nanoseconds / 1e6);
+    const fecha = new Date(timestampMilliseconds);
+    return fecha;
+  }
+  
   const [autor, setAutor] = useState('');
   const handleAutorChange = (event) => {
     setAutor(event.target.value);
@@ -51,13 +57,13 @@ const List = (props) => {
     resultFilter = data.filter(item => autor === 'Seleccionar' || item.autor === autor);
     resultFilter.sort((a, b) => {
       // Convierte las cadenas de fecha a objetos Date para comparar
-      const dateA = new Date(a.date.split('/').reverse().join('/'));
-      const dateB = new Date(b.date.split('/').reverse().join('/'));
+      const dateA = timestampDate(a.date);
+      const dateB = timestampDate(b.date);
   
       // Compara las fechas y devuelve el resultado de la comparación
       return dateB - dateA; // Para orden descendente (de más reciente a más antiguo)
       // Puedes cambiar a `return dateA - dateB;` para orden ascendente (de más antiguo a más reciente)
-    }); 
+    });
   };
 
 
@@ -77,6 +83,14 @@ const List = (props) => {
     (currentPage + 1) * itemsPerPage
   );
 
+
+
+  const dateFormat = (date) => {
+    const day = timestampDate(date).getDate();
+    const month = timestampDate(date).getMonth() + 1; // Los meses van de 0 a 11, así que sumamos 1
+    const year = timestampDate(date).getFullYear();
+    return day+"/"+month+"/"+year;
+  };
 
   return (
     <section>
@@ -105,7 +119,7 @@ const List = (props) => {
                 <div className='cardBody'>
                   <div className='row cardHeader'>
                     <div className='izq col-lg-6'>
-                      <Link to="/workplace" state={{ variable: card }}>
+                      <Link to="/workplace" state={{ variable: card, text: myVariableFromState }}>
                         <h1>{card.name}</h1>
                       </Link>
                     </div>
@@ -113,7 +127,7 @@ const List = (props) => {
                       <p>{card.autor}</p>
                     </div>
                     <div className='col-lg-12'>
-                      <h5>{card.date}</h5>
+                      <h5>{dateFormat(card.date)}</h5>
                     </div>
                   </div>
                   <div className='cardDesc'>
@@ -121,9 +135,10 @@ const List = (props) => {
                   <p style={{ whiteSpace: 'pre-line' }}>
                     {truncateText(card.message, 250)}
                     {card.message.length > 250 && (
-                      <span>
-                        <a href="/"> Ver más</a>
-                      </span>
+
+                      <Link to="/workplace" state={{ variable: card, text: myVariableFromState }}>
+                           Ver más 
+                      </Link>
                     )}
                   </p>
                   </div>

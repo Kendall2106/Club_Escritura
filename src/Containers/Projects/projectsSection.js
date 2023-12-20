@@ -5,7 +5,6 @@ import './projectsSection.css';
 
 const ProjectsSection = () => {
   
-  
   return (
     <section>
       <div className="three_box">

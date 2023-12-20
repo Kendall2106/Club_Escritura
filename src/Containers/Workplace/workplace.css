@@ -2,3 +2,16 @@
     white-space: 'pre-line';
     margin-top: 3%;
 }
+
+.date{
+    color: rgb(122, 120, 120);
+}
+
+
+.icono-grande {
+  font-size: 30px;
+}
+
+.arrow{
+    text-align: end;
+}

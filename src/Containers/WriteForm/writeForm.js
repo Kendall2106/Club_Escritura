@@ -49,7 +49,7 @@ function WriteForm() {
   const handleCreateMovie = async (e) => {
     e.preventDefault(); // Esto evita que la página se refresque
 
-    const today = new Date();
+    /*const today = new Date();
 
     // Obtener día, mes y año
     const day = today.getDate();
@@ -59,14 +59,14 @@ function WriteForm() {
     // Formatear la fecha como día/mes/año
     const formattedDate = `${day}/${month}/${year}`;
 
-    //const mensajeParaAlmacenar = mensaje.replace(/\n/g, "||");
+    //const mensajeParaAlmacenar = mensaje.replace(/\n/g, "||");*/
 
 
 
     const newMovie = {
       name: nombre,
       autor: autor,
-      date: formattedDate,
+      date: new Date(),
       message: mensaje
     };
 
