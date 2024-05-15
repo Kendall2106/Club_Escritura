@@ -35,6 +35,7 @@ function WriteForm() {
   const handleMensajeChange = (event) => {
     setMensaje(event.target.value);
   };
+  
 
   /*const handleSubmit = (event) => {
     event.preventDefault();
