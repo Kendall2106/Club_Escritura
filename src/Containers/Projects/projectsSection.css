@@ -1,65 +1,49 @@
 /*section{
     background-color: var(--color1);
 }*/
-img {
-    max-width: 100%;
-    height: auto;
+
+
+.container {
+    display: flex;
+    /* Centrado horizontal y vertical */
+    align-items: center;
+    /* Centrado vertical */
+    justify-content: center;
+    /* Centrado horizontal */
+
+
 }
 
-.three_box {
-    background-color: var(--color1);
-
-    margin-bottom: 5%;
+.textArea {
+    background-color: rgb(255, 255, 255);
+    margin: 2%;
+    min-height: calc(100vh - 215px);
+    padding: 5%;
+    margin: 2%;
+    border-radius: 8px;
+    /* Para darle un toque redondeado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Para un poco de sombra */
 }
 
-.box_text {
-    background: #fff;
-    text-align: center;
-    padding: 50px 20px 20px 20px;
-    border: #48ca95 solid 1px;
-    border-radius: 15px;
-    margin-bottom: 10%;
+.sendButton {
+    background: none;
+    border: 1px solid;
+    font: inherit;
+    line-height: 1;
+    padding: 1em;
+    width: 100%;
 }
 
-.text-bg {
-    text-align: left;
-    padding-top: 60px;
+textarea{
+    width: 100%;
+    margin-bottom: 2%;
+    border: none;
+    outline: none;
 }
 
-.text-bg h1 {
-    color: #fff;
-    font-size: 81px;
-    line-height: 80px;
-    padding-bottom: 50px;
-    font-weight: bold;
-    
+textarea:focus{
+    border-bottom: 1px solid;
 }
 
-.text-bg span {
-    color: #fff;
-    font-size: 42px;
-    line-height: 50px;
-    font-weight: normal;
-    padding-bottom: 20px;
-    display: block;
-}
 
-.fill:hover,
-.fill:focus {
-  box-shadow: inset 0 0 0 2em var(--hover);
-  color: white;
-}
-
-.fill {
-  --color: #534EA8;
---hover: #1e743d;
- 
-      background: none;
-      border: 2px solid;
-      font: inherit;
-      line-height: 1;
-     
-      padding: 1em;
-      width: 100%;
-   
-}

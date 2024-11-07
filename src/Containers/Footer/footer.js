@@ -3,12 +3,11 @@ import './footer.css';
 
 const Footer = () => {
   return (
-    <div className='footer2'>
-        <div className="container mt-12">
-            <div className="row">      
-            </div>  
-        </div>
-    </div>
+    <footer className="footer">
+      <div className="footer-content">
+        <p>&copy; {new Date().getFullYear()} MiAplicación. Todos los derechos reservados.</p>
+      </div>
+    </footer>
     );
 };
 
