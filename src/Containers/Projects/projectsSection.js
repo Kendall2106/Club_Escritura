@@ -5,7 +5,7 @@ import { createSentence, loadStreak, countSentencesByWeek } from '../../Services
 //import OpenAIService from './chatGPT.service';
 import './projectsSection.css';
 
-import { useLocation, useNavigate } from 'react-router-dom';
+
 
 const ProjectsSection = () => {
 
@@ -14,7 +14,6 @@ const ProjectsSection = () => {
   const [numSentences, setNumSentences] = useState();
   const [percentage, setPercentage] = useState();
   // const sentenceService = SentencesService();
-  const navigate = useNavigate();
 
   // Función para manejar el envío del formulario
   /*const handleSubmit = async (e) => {

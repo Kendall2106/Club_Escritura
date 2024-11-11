@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, deleteDoc, doc, getDocs, addDoc, Timestamp, query, where, getCountFromServer  } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
+import { getFirestore, collection, deleteDoc, doc, getDocs, addDoc, query, where, getCountFromServer  } from 'firebase/firestore';
 import firebaseConfig from '../Utility/firebase';
 
 

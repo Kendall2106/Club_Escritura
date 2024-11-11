@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './list.css';
 //import { Link, useLocation } from 'react-router-dom';
-import SentencesService from '../../Services/sentences.services';
 import { getSentences, deleteSentences } from '../../Services/sentences.services.js';
 /*
 import MovieService from '../../Services/poesia.services';
