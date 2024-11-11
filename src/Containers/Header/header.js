@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import './header.css';
 
 
@@ -15,11 +15,10 @@ const Header = () => {
           <span style={{paddingLeft:'2%'}}>BaBBle</span>
         </h1>
         <ul className="navbar-links">
-          <li><a className='liGeneric' href="#">Home</a></li>
-          <li><a className='liGeneric' href="#list">List</a></li>
-          <li><a className='liGeneric' href="#services">Badges</a></li>
-          <li><a className='liSettings' href="#contact">Settings</a></li>
-
+          <li><Link className="liGeneric" to="/">Home</Link></li>
+          <li><Link className="liGeneric" to="/list">List</Link></li>
+          <li><Link className="liGeneric" to="/workplace">Badges</Link></li>
+          <li><Link className="liSettings" to="/form">Settings</Link></li>
         </ul>
       </nav>
     </header>
