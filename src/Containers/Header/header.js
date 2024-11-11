@@ -10,7 +10,8 @@ const Header = () => {
 
 
         <h1 className="navbar-logo">
-          <img className='babble' src={process.env.PUBLIC_URL + "/img/babero.png"} />
+          <img className='babble' src={process.env.PUBLIC_URL + "/img/babero.png"} alt='Babero icono'/>
+   
           <span style={{paddingLeft:'2%'}}>BaBBle</span>
         </h1>
         <ul className="navbar-links">
