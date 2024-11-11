@@ -73,6 +73,8 @@ header {
 }
 
 .navbar {
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,6 +82,8 @@ header {
 
 .navbar-logo {
   font-size: 1.5rem;
+  color: var(--color2);
+  display: flex;
 }
 
 .navbar-links {
@@ -88,17 +92,37 @@ header {
   gap: 1rem;
 }
 
-.navbar-links li a {
-  color: rgb(0, 0, 0);
+.liGeneric {
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background 0.3s;
+  color: black;
 }
 
-.navbar-links li a:hover {
+.liGeneric:hover {
   background-color: #d8d5d5;
   border-radius: 5px;
+  color: black;
 }
+
+.liSettings{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  background-color: var(--color2);
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.liSettings:hover{
+  background-color: #7559e6;
+  color: white;
+}
+
+
+
+
 
 
 
