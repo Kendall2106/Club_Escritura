@@ -1,6 +1,5 @@
 class OpenAIService {
   constructor() {
-    this.apiKey = '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';
     this.apiUrl = 'https://api.openai.com/v1/chat/completions';
   }
 
@@ -11,7 +10,7 @@ class OpenAIService {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer ${this.apiKey}`,
+              'Authorization': `Bearer`,
               'OpenAI-Project': 'proj_VZAFd31Ht5kh6MPUFd7m3aXj',
             },
             body: JSON.stringify({
