@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 //import { checkGrammar } from '../../Services/languageTool.service.js';
-import { createSentence, loadStreak, countSentencesByWeek } from '../../Services/sentences.services.js';
+import { createSentence, loadStreak, countSentencesByWeek, loadBadgeById, updateStreak } from '../../Services/sentences.services.js';
 
 //import OpenAIService from './chatGPT.service';
 import './projectsSection.css';
@@ -13,6 +13,7 @@ const ProjectsSection = () => {
   const [streak, setStreak] = useState([]);
   const [numSentences, setNumSentences] = useState();
   const [percentage, setPercentage] = useState();
+  const [badge, setBadges] = useState([]);
   // const sentenceService = SentencesService();
 
   // Función para manejar el envío del formulario
@@ -31,7 +32,10 @@ const ProjectsSection = () => {
     const fetchStreak = async () => {
       const data = await loadStreak(new Date());
       const numS = await countSentencesByWeek();
+      const badgeTemp = await loadBadgeById(data.idBadge);
+      console.log(badgeTemp);
       setStreak(data);
+      setBadges(badgeTemp);
       setNumSentences(numS);
       setPercentage((numS / data.finalStreak) * 100);
     };
@@ -54,45 +58,60 @@ const ProjectsSection = () => {
       date: new Date()
     };
 
-   // console.log(newSentence.sentence);
+    setSentence('');
+    // console.log(newSentence.sentence);
     await createSentence(newSentence);
 
     const numSentenceTemp = numSentences;
     setNumSentences(numSentenceTemp + 1);
     setPercentage(((numSentenceTemp + 1) / streak?.finalStreak) * 100);
 
-   // navigate('/list');
+    if (numSentenceTemp + 1 > badge.streak) {
+      updateBadge();
+    }
+
+    // navigate('/list');
     // console.log(newMovie.name);
   };
 
+  const updateBadge = async () => {
+    // Convierte idBadge a número y le suma 1
+    const streakTemp = await updateStreak(streak.id, Number(streak.idBadge) + 1);
+    setStreak(streakTemp);
+    const badgeTemp = await loadBadgeById(streakTemp.idBadge);
+    setBadges(badgeTemp);
+
+  };
 
 
   return (
     <section>
+
       <div className="container">
-        <div className='textArea col-lg-8'>
-          <div className='writeArea'>
-            <form onSubmit={create}>
-              <div className="form-group">
-                <textarea
-                  id="sentence"
-                  name="sentence"
-                  rows="5"
-                  value={sentence}
-                  onChange={sentenceChange}
-                  placeholder="Escribe tu mensaje aquí"
-                  required
-                ></textarea>
-              </div>
+        <div className='col-lg-12 row'>
+          <div className='textArea col-lg-7 col-12'>
+            <div className='writeArea'>
+              <form onSubmit={create}>
+                <div className="form-group">
+                  <textarea
+                    id="sentence"
+                    name="sentence"
+                    rows="5"
+                    value={sentence}
+                    onChange={sentenceChange}
+                    placeholder="Escribe tu mensaje aquí"
+                    required
+                  ></textarea>
+                </div>
 
 
-              <button className='sendButton' type="submit">Enviar</button>
+                <button className='sendButton' type="submit">Enviar</button>
 
 
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
-        <div className='textArea col-lg-4'>
+          <div className='textArea col-lg-4 col-12'>
           {streak != null ? (
             <h1>{streak.name}</h1>
           ) : (
@@ -103,17 +122,20 @@ const ProjectsSection = () => {
             <div className="progress-bar">
               <div className="progress" style={{ width: `${percentage}%` }}>
                 <div className="progress-text">
-                {numSentences} / {streak.finalStreak}
+
+                  {numSentences} / {badge.streak}
                 </div>
               </div>
             </div>
           </div>
 
-
+          <h5>{badge.name}</h5>
 
 
         </div>
+        </div>
       </div>
+
     </section>
   );
 

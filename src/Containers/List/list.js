@@ -156,14 +156,18 @@ const List = () => {
 
     <section>
       <div className="container">
-        <div className='textArea col-lg-12'>
-          <h1>Sentences List</h1>
-          <div className="todo-list">
+        <div className='textArea col-lg-12' >
+          <h1 style={{marginBottom:'3%'}}>Sentences List</h1>
+          <div className='row' style={{ backgroundColor: 'var(--color1)', padding:'2%', display: 'flex', justifyContent: 'center', borderRadius: '10px'}}>
             {sentences.length > 0 ? (
               sentences.map((s, index) => (
-                <div key={index} className="card">
-                  <p>{s.sentence}</p>
-                  <button onClick={() => deleteSentence(s.id)}>Delete</button>
+                <div key={index} className='row col-lg-12 sentenceCard'>
+                  <div className='col-lg-11 col-11' >
+                    {s.sentence}
+                  </div>
+                  <div className='col-lg-1 col-1' >
+                    <button onClick={() => deleteSentence(s.id)} style={{border:'none', fontSize:'20px', backgroundColor:'var(--color2)', color:'white', borderRadius: '3px'}}><i class="uil uil-trash-alt"></i></button>
+                  </div>
                 </div>
               ))
             ) : (
@@ -174,7 +178,21 @@ const List = () => {
       </div>
     </section>
 
-    /*<section>
+    /*
+     <div className="todo-list row">
+            {sentences.length > 0 ? (
+              sentences.map((s, index) => (
+               
+              ))
+            ) : (
+              <li>No hay frases disponibles.</li>
+            )}
+          </div>
+    
+    
+    
+    
+    <section>
       <div className='container'>
         <div className='row justify-content-center'>
           <div className='body col-lg-12'>

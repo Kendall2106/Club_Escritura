@@ -66,6 +66,15 @@ header::after {
 }
 */
 
+
+
+
+
+
+
+
+
+/*
 header {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -120,7 +129,7 @@ header {
   color: white;
 }
 
-
+*/
 
 
 
@@ -129,3 +138,75 @@ header {
 
 
 /** end banner section **/
+
+
+header {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 0.9rem;
+
+}
+
+.navbar {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--color2);
+}
+
+
+.babble {
+  width: 35px;
+  height: 35px;
+}
+
+.navbar-nav .nav-link {
+  color: var(--colorText);
+  padding: 0.5rem 1rem;
+}
+
+.nav-item{
+  padding-right: 10%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(128, 128, 128)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+.liSettings{
+  color: var(--colorText);
+  padding: 0.5rem 1rem;
+  background-color: var(--color2); 
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.liSettings:hover{
+  background-color: #7559e6;
+  color: white; 
+}
+
+
+@media (max-width: 992px) {
+
+
+  .navbar-nav .nav-link {
+    color: var(--colorText);
+    text-align: center;
+  }
+
+  .nav-item{
+    padding-right: 0%;
+  }
+}

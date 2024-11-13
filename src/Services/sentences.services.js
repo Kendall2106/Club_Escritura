@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, deleteDoc, doc, getDocs, addDoc, query, where, getCountFromServer  } from 'firebase/firestore';
+import { getFirestore, collection, deleteDoc, doc, getDocs, getDoc , addDoc, query, where, getCountFromServer, updateDoc  } from 'firebase/firestore';
 import firebaseConfig from '../Utility/firebase';
 
 
@@ -7,6 +7,7 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 const sentenceCollection = collection(firestore, 'Sentences');
 const StreakCollection = collection(firestore, 'WeeklyChallenges');
+const BadgeCollection = collection(firestore, 'Badges');
 
 export const getSentences = async () => {
   const actualStreak = await loadStreak(new Date());
@@ -41,6 +42,26 @@ export const loadStreak = async (date) => {
   return documentRef.docs[0] ? { id: documentRef.docs[0].id, ...documentRef.docs[0].data() } : null;
 }
 
+export const loadBadgeById = async (idBadge) => {
+  console.log(idBadge);
+  const badgeDocRef = doc(BadgeCollection, idBadge);
+  const badgeDoc = await getDoc(badgeDocRef);
+
+  if (badgeDoc.exists()) {
+    return { id: badgeDoc.id, ...badgeDoc.data() };
+  } else {
+    return null;
+  }
+}
+
+export const updateStreak = async (idStreakTemp, idBadgeTemp) =>{
+  const documentRef = doc(StreakCollection, idStreakTemp);
+  await updateDoc(documentRef, { idBadge: idBadgeTemp+"" });
+
+  const badgeDoc = await getDoc(documentRef);
+
+   return { id: badgeDoc.id, ...badgeDoc.data() };
+}
 
 export const countSentencesByWeek = async () => {
   const actualStreak = await loadStreak(new Date());
